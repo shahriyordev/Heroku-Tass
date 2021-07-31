@@ -1,0 +1,40 @@
+extends layout
+block content
+  body.fixed-sn.white-skin
+    // Main layout
+    main
+      .container-fluid
+        // Section: Head options
+        section
+          .card
+            .card-body
+              // Table
+              table.table
+                // Table head
+                thead.blue-grey.lighten-10
+                  tr
+                    th #
+                    th Avtor
+                    th Last Name
+                    th Parol
+                    th Phone
+                    th Password
+                    th ImgUrl
+                // Table head
+                // Table body
+                tbody
+                  tr
+                  th(scope='row') 1
+                  td  #{admin}
+                  //- td  #{musics.lastname}
+                  td  #{musics.parol}
+                  td  #{musics.phone} 
+                  td  #{musics.password}
+                  td  #{musics.imgUrl}
+            
+                  
+               
+          .my-5
+      if user.id === musics.lastname 
+        a(href="/music/edit/" + musics._id).mr-5.btn.btn-warning Edit
+        a(href="/music/delete/" + musics._id).btn.btn-danger Delete

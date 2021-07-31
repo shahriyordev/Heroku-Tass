@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-lg-12.ml-5.mt-5
+    
+                form(method="POST" action="/music/edit/" + musics._id)
+                    .form-group.mt-3    
+                        label(for='name') Name edit
+                        input#name.form-control(type='text' name="name" value=musics.name)
+                    .form-group
+                        label(for='lastname') Lastname edit
+                        input#lastname.form-control(type='text' name="lastname" value=admin)
+                    .form-group
+                        label(for='parol') Parol edit
+                        input#parol.form-control(type='text' name="parol" value=musics.parol)
+                    .form-group
+                        label(for='phone') Phone edit
+                        input#phone.form-control(type='text' name="phone" value=musics.phone)
+                    .form-group
+                        label(for='parol') Password edit
+                        input#password.form-control(type='text' name="password" value=musics.password)
+                    .form-group
+                        label(for='imgUrl') ImgUrl edit
+                        input#imgUrl.form-control(type='text' name="imgUrl" value=musics.imgUrl)
+                
+                    button.btn.btn-success(type='submit') Edit
+

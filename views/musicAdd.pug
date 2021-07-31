@@ -1,0 +1,26 @@
+extends layout
+block content
+  .container
+        .row
+            .col-lg-12.ml-5.mt-5
+                form(method="POST" action="/music/add")
+                    .form-group.mt-3
+                        label(for='name') Firstname
+                        input#name.form-control(type='text' name="name")
+                    .form-group
+                        label(for='lastname') Lastname
+                        input#lastname.form-control(type='text' name="lastname")
+                    .form-group
+                        label(for='parol') Login
+                        input#parol.form-control(type='text' name="parol")
+                    .form-group
+                        label(for='phone') Phone
+                        input#phone.form-control(type='text' name="phone")
+                    .form-group
+                        label(for='password') Password
+                        input#password.form-control(type='text' name="password")
+                    .form-group
+                        label(for='imgUrl') ImgUrl
+                        input#imgUrl.form-control(type='text' name="imgUrl")
+                
+                    button.btn.btn-success(type='submit') Add

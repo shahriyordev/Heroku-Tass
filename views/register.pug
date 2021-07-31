@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    .row
+        .col-lg-12.ml-5.mt-5
+            form(method="POST" action="/register")
+                .form-group.mt-3
+                    label(for='name') Firstname
+                    input#name.form-control(type='text' name="name")
+                .form-group
+                    label(for='username') Username
+                    input#username.form-control(type='text' name="username")
+                .form-group
+                    label(for='email') Email
+                    input#email.form-control(type='text' name="email")
+                .form-group
+                    label(for='password') Password
+                    input#password.form-control(type='password' name="password")
+            
+                .form-group
+                    label(for='password2') Password autentificate
+                    input#password2.form-control(type='password' name="password2")
+            
+                button.btn.btn-success(type='submit') Create Account

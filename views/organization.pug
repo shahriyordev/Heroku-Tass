@@ -1,0 +1,194 @@
+extends layout
+
+block content
+    main
+      .container-fluid
+         section
+           h2.font-weight-bold.mt-lg-5.mb-5.pb-4
+             strong Organization
+           // Top Table UI
+           .card.p-2.mb-5
+             // Grid row
+             .row
+               .col-lg-3.col-md-12
+                 
+                  select.mdb-select.colorful-select.dropdown-primary.mx-2.md-form.mt-3.md-dropdown
+                   option(value='' disabled='' selected='') Bulk actions
+                   option(value='1') Delate
+                   option(value='2') Export
+                   option(value='3') Change segment
+               .col-lg-3.col-md-6
+                 // Blue select
+                 select.mdb-select.colorful-select.dropdown-primary.mx-2.md-form.mt-3.md-dropdown
+                   option(value='' disabled='' selected='') Show only
+                   option(value='1') All  (2000)
+                   option(value='2') Never opened  (200)
+                   option(value='3') Opened but unanswered  (1800)
+                   option(value='4') Answered  (200)
+                   option(value='5') Unsunscribed  (50)
+                 // /Blue select
+                 // Grid column
+                 // Grid column
+               .col-lg-3.col-md-6
+                   // Blue select
+                   select.mdb-select.colorful-select.dropdown-primary.mx-2.md-form.mt-3.md-dropdown
+                     option(value='' disabled='' selected='') Filter segments
+                     option(value='1') Contacts in no segments  (100)
+                     option(value='1') Segment 1  (2000)
+                     option(value='2') Segment 2  (1000)
+                     option(value='3') Segment 3  (4000)
+                   // /Blue select
+                   // Grid column
+                   // Grid column
+               .col-lg-3.col-md-6
+                     form.form-inline.md-form.mt-2.ml-2
+                       input.form-control.mt-2(type='text' placeholder='Search' style='max-width: 150px;')
+                       button.btn.btn-sm.btn-primary.ml-2.px-1
+                         i.fas.fa-search
+
+           .card.card-cascade.narrower.z-depth-1
+             // Card image
+             .view.view-cascade.gradient-card-header.blue-gradient.narrower.py-2.mx-4.mb-3.d-flex.justify-content-between.align-items-center
+               div
+                 button.btn.btn-outline-white.btn-rounded.btn-sm.px-2(type='button')
+                   i.fas.fa-th-large.mt-0
+                 button.btn.btn-outline-white.btn-rounded.btn-sm.px-2(type='button')
+                   i.fas.fa-columns.mt-0
+               a.white-text.mx-3(href='') Table name
+               div
+                 button.btn.btn-outline-white.btn-rounded.btn-sm.px-2(type='button')
+                   i.fas.fa-pencil-alt.mt-0
+                 button.btn.btn-outline-white.btn-rounded.btn-sm.px-2(type='button')
+                   i.fas.fa-eraser.mt-0
+                 button.btn.btn-outline-white.btn-rounded.btn-sm.px-2(type='button')
+                   i.fas.fa-info-circle.mt-0
+             // /Card image
+             .px-4
+               .table-responsive
+                 // Table
+                 table.table.table-hover.mb-0
+                   // Table head
+                   thead
+                     tr
+                       th
+                         input#checkbox.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox')
+                       th.th-lg
+                         a
+                           | First Name 
+                           i.fas.fa-sort.ml-1
+                       th.th-lg
+                         a(href='')
+                           | Last Name
+                           i.fas.fa-sort.ml-1
+                       th.th-lg
+                         a(href='')
+                           | Username
+                           i.fas.fa-sort.ml-1
+                       th.th-lg
+                         a(href='')
+                           | Email
+                           i.fas.fa-sort.ml-1
+                       th.th-lg
+                         a(href='')
+                           | Country
+                           i.fas.fa-sort.ml-1
+                       th.th-lg
+                         a(href='')
+                           | City
+                           i.fas.fa-sort.ml-1
+                   // Table head
+                   // Table body
+                   tbody
+                     tr
+                       th(scope='row')
+                         input#checkbox1.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox1')
+                       td Mark
+                       td Otto
+                       td @mdo
+                       td markotto@gmail.com
+                       td USA
+                       td San Francisco
+                     tr
+                       th(scope='row')
+                         input#checkbox2.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox2')
+                       td Jacob
+                       td Thornton
+                       td @fat
+                       td jacobt@gmail.com
+                       td France
+                       td Paris
+                     tr
+                       th(scope='row')
+                         input#checkbox3.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox3')
+                       td Larry
+                       td the Bird
+                       td @twitter
+                       td larrybird@gmail.com
+                       td Germany
+                       td Berlin
+                     tr
+                       th(scope='row')
+                         input#checkbox4.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox4')
+                       td Paul
+                       td Topolski
+                       td @P_Topolski
+                       td ptopolski@gmail.com
+                       td Poland
+                       td Warsaw
+                     tr
+                       th(scope='row')
+                         input#checkbox5.form-check-input(type='checkbox')
+                         label.form-check-label(for='checkbox5')
+                       td Anna
+                       td Doe
+                       td @andy
+                       td annadoe@gmail.com
+                       td Spain
+                       td Madrid
+                   // Table body
+                   // Table
+               hr.my-0
+               // Bottom Table UI
+               .d-flex.justify-content-between
+                 // Name
+                 select.mdb-select.colorful-select.dropdown-primary.mt-2
+                   option(value='' disabled='') Rows number
+                   option(value='1' selected='') 5 rows
+                   option(value='2') 25 rows
+                   option(value='3') 50 rows
+                   option(value='4') 100 rows
+                 // Pagination
+                 nav.my-4
+                   ul.pagination.pagination-circle.pg-blue.mb-0
+                     // First
+                     li.page-item.disabled.clearfix.d-none.d-md-block
+                       a.page-link First
+                     // Arrow left
+                     li.page-item.disabled
+                       a.page-link(aria-label='Previous')
+                         span(aria-hidden='true') «
+                         span.sr-only Previous
+                     // Numbers
+                     li.page-item.active
+                       a.page-link 1
+                     li.page-item
+                       a.page-link 2
+                     li.page-item.clearfix.d-none.d-md-inline-block
+                       a.page-link 3
+                     li.page-item.clearfix.d-none.d-md-inline-block
+                       a.page-link 4
+                     li.page-item.clearfix.d-none.d-md-inline-block
+                       a.page-link 5
+                     // Arrow right
+                     li.page-item
+                       a.page-link(aria-label='Next')
+                         span(aria-hidden='true') »
+                         span.sr-only Next
+                     // First
+                     li.page-item.clearfix.d-none.d-md-block
+                       a.page-link Last		 
